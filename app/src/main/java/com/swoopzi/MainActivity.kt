@@ -1,4 +1,4 @@
-package com.swoopzi.swoopzi
+package com.swoopzi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
