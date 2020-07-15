@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageCompareSlider">
+        <attr name="background_image" format="reference" />
+        <attr name="foreground_image" format="reference" />
+        <attr name="slider_icon" format="reference" />
+    </declare-styleable>
+</resources>
