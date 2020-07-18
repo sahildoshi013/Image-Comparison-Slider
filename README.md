@@ -5,18 +5,10 @@ Demo:
 ![Demo](https://media.giphy.com/media/j1sdApf7nJOTvXoKST/giphy.gif)
 
 To Use: 
-
-Add following in build.gradle at project level.
-
-        repositories {
-                maven {
-                        url 'https://dl.bintray.com/mrsjd/Image-Comparison-Slider'
-                }
-        } 
         
 Add following in build.gradle at module level.
    
-        implementation 'com.swoopzi:image-comparison-slider:{LATEST_VERSION}'
+        implementation 'com.swoopzi:image-comparison-slider:0.1.0'
 
 Sample Usage:
 
