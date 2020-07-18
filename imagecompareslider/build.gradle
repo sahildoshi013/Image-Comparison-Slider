@@ -2,6 +2,30 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+ext {
+    bintrayRepo = 'Image-Comparison-Slider'
+    bintrayName = 'image-comparison-slider'
+
+    publishedGroupId = 'com.swoopzi'
+    libraryName = 'ImageComparisonSlider'
+    artifact = 'image-comparison-slider'
+
+    libraryDescription = 'Android library for image comparison slider custom view'
+
+    siteUrl = 'https://github.com/sahildoshi013/Image-Comparison-Slider'
+    gitUrl = 'https://github.com/sahildoshi013/Image-Comparison-Slider.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'MrSJD'
+    developerName = 'Sahil Doshi'
+    developerEmail = 'sahiljdoshi@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
@@ -24,6 +48,13 @@ android {
     }
 }
 
+tasks.withType(Javadoc) {
+    failOnError false
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -35,3 +66,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
