@@ -1,17 +1,19 @@
 [versions]
-agp = "8.5.0"
+agp = "8.5.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "5.0-SNAPSHOT"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.6.1"
+lifecycleRuntimeKtx = "2.8.3"
 activityCompose = "1.9.0"
-composeBom = "2024.04.01"
+composeBom = "2024.06.00"
 appcompat = "1.7.0"
 material = "1.12.0"
 constraintlayout = "2.1.4"
 testng = "6.9.6"
+imagecomparisonslider = "1.0.1"
+viewbinding = "8.5.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +34,8 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 testng = { group = "org.testng", name = "testng", version.ref = "testng" }
+imagecomparisonslider = { group = "com.swoopzi.lib", name = "imagecomparisonslider", version.ref = "imagecomparisonslider" }
+androidx-viewbinding = { group = "androidx.databinding", name = "viewbinding", version.ref = "viewbinding" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

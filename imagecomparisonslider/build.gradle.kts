@@ -52,7 +52,7 @@ publishing {
 
             groupId = "com.swoopzi.lib"
             artifactId = "imagecomparisonslider"
-            version = "1.0.1"
+            version = "1.0.0"
 
             pom {
                 name.set("Image Comparison Slider")
