@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -42,4 +43,50 @@ dependencies {
     testImplementation(libs.testng)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
+
+            groupId = "com.swoopzi.lib"
+            artifactId = "imagecomparisonslider"
+            version = "1.0.1"
+
+            pom {
+                name.set("Image Comparison Slider")
+                description.set("The Image Comparison Slider is an Android library that allows users to easily compare two images by sliding between them")
+                url.set("https://github.com/sahildoshi013/Image-Comparison-Slider")
+                licenses {
+                    license {
+                        name.set("GNU General Public License v3.0")
+                        url.set("https://choosealicense.com/licenses/gpl-3.0/")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("sahildoshi013")
+                        name.set("Sahil Doshi")
+                        email.set("sahiljdoshi@gmail.com")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:github.com/sahildoshi013/Image-Comparison-Slider.git")
+                    developerConnection.set("scm:git:ssh://github.com/sahildoshi013/Image-Comparison-Slider.git")
+                    url.set("https://github.com/sahildoshi013/Image-Comparison-Slider")
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/sahildoshi013/Image-Comparison-Slider")
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
 }
